@@ -52,13 +52,13 @@ export default function Search() {
       <div className="flex w-full flex-col gap-y-5">
         {
           results.length === 0 ?
-            <p className="mb-4 w-full text-sm font-semibold sm:text-base">
-              No results found for &quot;{searchParams.get("q")}&quot;
-            </p> 
+            <p className="mb-4 w-full font-mono text-sm text-zinc-500">
+              No results for &quot;<span className="text-zinc-300">{searchParams.get("q")}</span>&quot;
+            </p>
             :
             <>
-              <p className="-mb-2 w-full text-sm font-semibold sm:text-base">
-                {results.length} results found for &quot;{searchParams.get("q")}&quot;
+              <p className="-mb-2 w-full font-mono text-sm text-zinc-500">
+                <span className="text-emerald-400">{results.length}</span> results for &quot;<span className="text-zinc-300">{searchParams.get("q")}</span>&quot;
               </p> 
 
               {results.map((result) => (

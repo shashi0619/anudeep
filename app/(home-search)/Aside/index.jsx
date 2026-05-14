@@ -15,20 +15,20 @@ export default function Aside() {
   const { isAsideOpen, setIsAsideOpen } = useAside();
   const pathname = usePathname();
 
-  useEffect(() => {
-    setIsAsideOpen(false);
-  }, [pathname]);
+  useEffect(() => { setIsAsideOpen(false); }, [pathname]);
+
+  const sidebarStyle = { background: "rgba(2,11,24,0.95)", borderLeft: "1px solid rgba(255,255,255,0.06)", backdropFilter: "blur(24px)" };
 
   return (
     <>
       <Sheet open={isAsideOpen} onOpenChange={setIsAsideOpen}>
-        <SheetContent side="right" className="w-[350px] overflow-y-auto bg-gray-100 p-6 pt-10">
-          <AsideContent data={{ latestPosts, categories }}/> 
+        <SheetContent side="right" className="w-[340px] overflow-y-auto p-6 pt-10" style={sidebarStyle}>
+          <AsideContent data={{ latestPosts, categories }} />
         </SheetContent>
       </Sheet>
 
-      <aside className="sticky top-0 hidden min-h-screen w-[350px] shrink-0 flex-col gap-y-5 border-l border-solid border-gray-300 p-6 pt-4 md:flex">
-        <AsideContent data={{ latestPosts, categories }}/> 
+      <aside className="sticky top-0 hidden min-h-screen w-[340px] shrink-0 flex-col gap-y-6 p-6 pt-6 md:flex" style={sidebarStyle}>
+        <AsideContent data={{ latestPosts, categories }} />
       </aside>
     </>
   );

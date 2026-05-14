@@ -3,32 +3,33 @@ import { MdDateRange } from "react-icons/md";
 
 export default function PostCard({ data }) {
   return (
-    <Link 
-      className="flex w-full flex-col gap-y-3 rounded-lg p-2 transition hover:bg-gray-300"
+    <Link
+      className="card-hover grad-border group flex w-full flex-col gap-y-3 rounded-2xl p-3"
+      style={{ background: "rgba(6,15,31,0.85)" }}
       href={`/${data.slug.current}`}
     >
-      <img 
-        src={data.mainImage} 
-        alt="Post cover" 
-        className="aspect-[3/2] w-full rounded-md bg-gray-300 object-cover object-center" 
-      />
+      <div className="overflow-hidden rounded-xl">
+        <img
+          src={data.mainImage}
+          alt="Post cover"
+          className="aspect-[3/2] w-full bg-[#0c1e35] object-cover object-center transition-transform duration-500 group-hover:scale-105"
+        />
+      </div>
 
-      <h2 className="text-base font-bold text-black md:text-lg">
+      <h2 className="text-sm font-bold leading-snug text-slate-100 transition-colors group-hover:text-amber-300 md:text-base">
         {data.title}
       </h2>
 
-      <p className="line-clamp-3 text-sm font-medium text-gray-400">
+      <p className="line-clamp-2 text-xs leading-relaxed" style={{ color: "var(--text-3)" }}>
         {data.description || (data.content && data.content[0]?.children[0]?.text)}
       </p>
 
-      <p className="flex w-full items-center gap-x-1 text-xs font-medium  text-gray-900">
-        <MdDateRange size={16}/>
+      <div className="flex items-center gap-1.5 text-[10px]" style={{ color: "var(--text-3)" }}>
+        <MdDateRange size={12} className="text-amber-500/50" />
         {new Date(data._createdAt).toLocaleDateString("en-US", {
-          year: "numeric",
-          month: "long",
-          day: "numeric",
+          year: "numeric", month: "short", day: "numeric",
         })}
-      </p>
+      </div>
     </Link>
   );
 }

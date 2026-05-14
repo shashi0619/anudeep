@@ -3,37 +3,36 @@ import { MdDateRange } from "react-icons/md";
 
 export default function PostResultCard({ data }) {
   return (
-    <Link 
-      className="flex w-full items-center gap-x-3 rounded-lg p-2 transition hover:bg-gray-300 md:gap-x-5"
+    <Link
+      className="card-hover grad-border group flex w-full items-center gap-x-4 rounded-2xl p-3 md:gap-x-5"
+      style={{ background: "rgba(6,15,31,0.85)" }}
       href={`/${data.slug.current}`}
     >
-      <img 
-        src={data.mainImage}  
-        alt="Post Result Cover" 
-        className="aspect-square w-[150px] shrink-0 rounded-md object-cover object-center md:w-[190px] lg:w-[220px]" 
-      />
+      <div className="aspect-square w-[120px] shrink-0 overflow-hidden rounded-xl md:w-[160px] lg:w-[190px]">
+        <img
+          src={data.mainImage}
+          alt="Post Result"
+          className="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+        />
+      </div>
 
-      <div className="flex w-full flex-col gap-y-2 md:gap-y-3">
-        <p className="hidden w-full items-center gap-x-1 text-xs font-bold text-gray-900 md:flex">
-          <MdDateRange size={16}/>
-          {new Date(data._createdAt).toLocaleDateString("en-US", {
-            year: "numeric",
-            month: "long",
-            day: "numeric",
-          })}
+      <div className="flex w-full flex-col gap-y-2">
+        <p className="flex items-center gap-1.5 text-[10px]" style={{ color: "var(--text-3)" }}>
+          <MdDateRange size={12} className="text-amber-500/50" />
+          {new Date(data._createdAt).toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" })}
         </p>
-            
-        <h2 className="text-base font-bold sm:text-lg md:text-2xl">
+
+        <h2 className="text-sm font-bold leading-snug text-slate-100 transition-colors group-hover:text-amber-300 sm:text-base md:text-xl">
           {data.title}
         </h2>
 
-        <p className="line-clamp-3 w-full text-sm text-gray-500 opacity-75 md:text-[15px]">
+        <p className="line-clamp-2 text-xs leading-relaxed md:text-sm" style={{ color: "var(--text-3)" }}>
           {data.description || (data.content && data.content[0]?.children[0]?.text)}
         </p>
 
-        <div className="mt-2 w-fit shrink-0 rounded-full border border-solid border-gray-400 p-1 px-3 text-xs font-semibold sm:text-sm">
+        <span className="glass mt-1 w-fit rounded-xl px-2.5 py-0.5 text-[10px] uppercase tracking-wider text-slate-500">
           {data.category?.name || "Unknown"}
-        </div>
+        </span>
       </div>
     </Link>
   );
