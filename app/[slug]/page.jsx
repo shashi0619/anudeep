@@ -1,12 +1,13 @@
 import { notFound } from "next/navigation";
 import { MdDateRange } from "react-icons/md";
+
 import { getPostBySlug } from "@/services";
 
 import ArticleBody from "./components/ArticleBody";
+import BackButton from "./components/BackButton";
 import RegisterVisit from "./components/RegisterVisit";
 import SocialsButtons from "./components/SocialButtons";
 import Comments from "./Comments";
-import BackButton from "./components/BackButton";
 
 export default async function Page({ params }) {
   const post = await getPostBySlug(params.slug);
@@ -21,13 +22,13 @@ export default async function Page({ params }) {
         <img
           src={post.mainImage}
           alt="Post cover"
-          className="h-full w-full object-cover object-center scale-105"
+          className="h-full w-full scale-105 object-cover object-center"
           style={{ filter: "brightness(0.7)" }}
         />
         <div className="absolute inset-0" style={{ background: "linear-gradient(to top, #020b18 0%, rgba(2,11,24,0.6) 40%, transparent 100%)" }} />
 
         {/* Overlay badge */}
-        <div className="absolute bottom-8 left-0 right-0 mx-auto max-w-[820px] px-5">
+        <div className="absolute inset-x-0 bottom-8 mx-auto max-w-[820px] px-5">
           <div className="flex flex-wrap items-center gap-3">
             <span className="glass-gold rounded-xl px-3 py-1.5 text-xs font-bold text-amber-400">
               {post.category.name}

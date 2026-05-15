@@ -1,13 +1,14 @@
 import Link from "next/link";
-import logo from "@/assets/img/logo.png";
 
+import logo from "@/assets/img/logo.png";
 import AsideProvider from "@/context/AsideContext";
+
+import AnimatedOrbs from "./components/AnimatedOrbs";
 import AsideOpener from "./components/AsideOpener";
-import Searchbar from "./components/Searchbar";
-import Aside from "./Aside";
 import Footer from "./components/Footer";
 import ScrollProgress from "./components/ScrollProgress";
-import AnimatedOrbs from "./components/AnimatedOrbs";
+import Searchbar from "./components/Searchbar";
+import Aside from "./Aside";
 
 export default function Layout({ children }) {
   return (

@@ -1,11 +1,12 @@
-import { HiOutlineLightningBolt, HiOutlineFire } from "react-icons/hi";
 import { BiCategoryAlt } from "react-icons/bi";
+import { HiOutlineFire, HiOutlineLightningBolt } from "react-icons/hi";
+
+import SectionReveal from "@/app/(home-search)/components/SectionReveal";
 
 import ArticleOfTheDay from "./components/ArticleOfTheDay";
+import HeroSection from "./components/HeroSection";
 import TrendingPosts from "./components/TrendingPosts";
 import Categories from "./Categories";
-import HeroSection from "./components/HeroSection";
-import SectionReveal from "@/app/(home-search)/components/SectionReveal";
 
 function SectionHeading({ icon: Icon, label, accent, sub }) {
   return (
@@ -21,7 +22,7 @@ function SectionHeading({ icon: Icon, label, accent, sub }) {
           {sub && <p className="mt-0.5 text-xs" style={{ color: "var(--text-3)" }}>{sub}</p>}
         </div>
       </div>
-      <div className="flex-1 mx-4 h-px" style={{ background: "linear-gradient(90deg, rgba(255,255,255,0.06), transparent)" }} />
+      <div className="mx-4 h-px flex-1" style={{ background: "linear-gradient(90deg, rgba(255,255,255,0.06), transparent)" }} />
     </div>
   );
 }

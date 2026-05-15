@@ -4,16 +4,17 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 import CategoryCard from "@/shared-components/cards/CategoryCard";
+
 import LatestPostCard from "./components/LatestPostCard";
 import SkeletonAside from "./components/SkeletonAside";
 
 function AsideLabel({ label }) {
   return (
-    <div className="flex items-center gap-3 mb-1">
+    <div className="mb-1 flex items-center gap-3">
       <p className="text-[9px] font-bold uppercase tracking-[0.25em]" style={{ color: "var(--text-3)" }}>
         {label}
       </p>
-      <div className="flex-1 h-px" style={{ background: "rgba(255,255,255,0.05)" }} />
+      <div className="h-px flex-1" style={{ background: "rgba(255,255,255,0.05)" }} />
     </div>
   );
 }

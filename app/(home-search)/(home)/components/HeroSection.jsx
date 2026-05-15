@@ -1,4 +1,4 @@
-import { FaTwitter, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { FaEnvelope, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { HiOutlineAcademicCap, HiOutlineGlobe, HiOutlineLocationMarker } from "react-icons/hi";
 import { MdVerified } from "react-icons/md";
 
@@ -90,12 +90,12 @@ export default function HeroSection() {
           <div className="flex flex-col items-center gap-5 text-center md:items-start md:text-left">
 
             {/* Live indicator */}
-            <div className="animate-fade-in-up delay-75 flex items-center gap-2">
+            <div className="animate-fade-in-up flex items-center gap-2 delay-75">
               <span className="relative flex h-2 w-2">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-amber-400 opacity-60" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-amber-500" />
               </span>
-              <span className="text-xs font-medium tracking-widest uppercase" style={{ color: "var(--text-3)" }}>
+              <span className="text-xs font-medium uppercase tracking-widest" style={{ color: "var(--text-3)" }}>
                 Foreign Policy · International Relations · Law
               </span>
             </div>
@@ -111,7 +111,7 @@ export default function HeroSection() {
             </div>
 
             {/* Credential chips */}
-            <div className="animate-fade-in-up delay-200 flex flex-col gap-2">
+            <div className="animate-fade-in-up flex flex-col gap-2 delay-200">
               {credentials.map(({ icon: Icon, text, color }) => (
                 <div key={text} className="glass flex items-center gap-2 rounded-xl px-4 py-2.5">
                   <Icon size={15} className={`${color} shrink-0`} />
@@ -121,14 +121,14 @@ export default function HeroSection() {
             </div>
 
             {/* Bio */}
-            <p className="animate-fade-in-up delay-300 max-w-xl text-sm leading-relaxed md:text-base" style={{ color: "var(--text-2)" }}>
+            <p className="animate-fade-in-up max-w-xl text-sm leading-relaxed delay-300 md:text-base" style={{ color: "var(--text-2)" }}>
               Scholar and analyst at the intersection of international law, strategic affairs, and
               Indo-Pacific security. Writing on India–Japan ties, East Asian dynamics, and
-              South Asia's foreign policy — from an academic lens, without the noise.
+              South Asia&apos;s foreign policy — from an academic lens, without the noise.
             </p>
 
             {/* Topic pills */}
-            <div className="animate-fade-in-up delay-300 flex flex-wrap justify-center gap-2 md:justify-start">
+            <div className="animate-fade-in-up flex flex-wrap justify-center gap-2 delay-300 md:justify-start">
               {tags.map((tag, i) => (
                 <span
                   key={tag}
@@ -151,7 +151,7 @@ export default function HeroSection() {
             </div>
 
             {/* Social buttons */}
-            <div className="animate-fade-in-up delay-500 flex flex-wrap justify-center gap-2.5 md:justify-start">
+            <div className="animate-fade-in-up flex flex-wrap justify-center gap-2.5 delay-500 md:justify-start">
               {socials.map(({ href, icon: Icon, label, hover, primary }) => (
                 <a
                   key={label}

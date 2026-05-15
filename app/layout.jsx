@@ -1,7 +1,9 @@
 import { Inter } from 'next/font/google';
+
+import ToasterContext from '@/context/ToasterContext';
+
 import "@/assets/css/reset.css";
 import "@/assets/css/globals.css";
-import ToasterContext from '@/context/ToasterContext';
 
 const inter = Inter({ subsets: ['latin'] });
 

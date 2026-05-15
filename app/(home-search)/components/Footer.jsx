@@ -1,5 +1,5 @@
-import { FaLinkedin, FaTwitter, FaEnvelope } from "react-icons/fa";
-import { HiOutlineAcademicCap, HiOutlineLocationMarker, HiArrowUp } from "react-icons/hi";
+import { FaEnvelope, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { HiArrowUp, HiOutlineAcademicCap, HiOutlineLocationMarker } from "react-icons/hi";
 
 const socials = [
   { label: "LinkedIn", href: "https://www.linkedin.com/in/anudeepgujjeti/", icon: FaLinkedin, hover: "hover:border-blue-500/40 hover:text-blue-400 hover:shadow-blue-900/20" },

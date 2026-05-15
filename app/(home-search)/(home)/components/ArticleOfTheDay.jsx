@@ -1,5 +1,6 @@
 import clsx from "clsx";
 import Link from "next/link";
+
 import { getArticleOfTheDay } from "@/services";
 
 export default async function ArticleOfTheDay() {
@@ -46,7 +47,7 @@ export default async function ArticleOfTheDay() {
         <div className={clsx(
           "absolute inset-0",
           "bg-gradient-to-t from-[#060f1f] via-[#060f1f]/20 to-transparent",
-          "lg:bg-gradient-to-r lg:from-[#060f1f] lg:via-[#060f1f]/15 lg:to-transparent"
+          "lg:via-[#060f1f]/15 lg:bg-gradient-to-r lg:from-[#060f1f] lg:to-transparent"
         )} />
       </div>
     </article>

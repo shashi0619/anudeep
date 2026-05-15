@@ -1,4 +1,5 @@
 import Link from "next/link";
+
 import { getMostVisitedPosts } from "@/services";
 import FHSlider from "@/shared-components/ui/FHSlider";
 

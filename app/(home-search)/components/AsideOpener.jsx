@@ -1,6 +1,7 @@
 "use client";
 
 import { GiHamburgerMenu } from "react-icons/gi";
+
 import { useAside } from "@/context/AsideContext";
 
 export default function AsideOpener() {

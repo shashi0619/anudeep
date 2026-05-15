@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+
 import CategoryCard from "@/shared-components/cards/CategoryCard";
 
 export default function LatestPostCard({ data }) {
