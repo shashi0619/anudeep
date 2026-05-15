@@ -33,7 +33,9 @@ export default function PostResultCard({ data }) {
         <span className="glass mt-1 w-fit rounded-xl px-2.5 py-0.5 text-[10px] uppercase tracking-wider text-slate-500">
           {data.category?.name || "Unknown"}
         </span>
+      
       </div>
     </Link>
+
   );
 }
