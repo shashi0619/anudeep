@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata = {
   title: 'Anudeep Gujeeti — Foreign Policy Analyst & Scholar',
   description: 'Writing on India–Japan relations, Indo-Pacific geopolitics, East Asian security, and foreign policy. Assistant Professor, Symbiosis Law School. Ph.D., University of Hyderabad.',
-  openGraph: { images: [{ url: 'https://blog.sergiordg.com/share.jpg' }] },
+  openGraph: { images: [{ url: 'https://anudeep.gujeeti.com/og.png' }] },
 };
 
 export default function RootLayout({ children }) {
